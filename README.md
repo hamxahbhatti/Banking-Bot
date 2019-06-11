@@ -8,5 +8,5 @@ Deep learning Based Chat bot that will answers your queries about banking
   
  
  # Issue 
- Since this bot is trained on small portion of data. it is not able to understand context of the questions if they are asked in different words.
+ Since this bot is trained on small portion of data. it is not able to understand context of the questions if they are asked in different words.Questions and their Answers are in Training Data folder.
  To solve this issue i have created another bot that is made with rasa X.
