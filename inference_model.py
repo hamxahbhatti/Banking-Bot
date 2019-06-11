@@ -2,9 +2,9 @@ import numpy as np
 import pickle
 
 
-with open('Model Misc/tokenizer_src.pickle','rb') as file:
+with open('Model Misc/Banking Bot/tokenizer_src.pickle','rb') as file:
     tokenizer_src = pickle.load(file)
-with open('Model Misc/tokenizer_dest.pickle','rb') as file:
+with open('Model Misc/Banking Bot/tokenizer_dest.pickle','rb') as file:
     tokenizer_dest=  pickle.load(file)
 
 
@@ -21,7 +21,7 @@ def translate(encoder,decoder,input_text, true_output_text=None):
     input_tokens = tokenizer_src.text_to_tokens(text=input_text,
                                                 reverse=True,
                                                 padding=True)
-    print(input_tokens)
+    #print(input_tokens)
     
     # Get the output of the encoder's GRU which will be
     # used as the initial state in the decoder's GRU.
@@ -97,21 +97,6 @@ def translate(encoder,decoder,input_text, true_output_text=None):
         # Increment the token-counter.
         count_tokens += 1
 
-    # Sequence of tokens output by the decoder.
-    #output_tokens = decoder_input_data[0]
-    
-    # Print the input-text.
-    print("Input text:")
-    print(input_text)
-    print()
-
-    # Print the translated output-text.
-    print("Translated text:")
     print(output_text)
-    print()
 
-    # Optionally print the true translated text.
-    if true_output_text is not None:
-        print("True output text:")
-        print(true_output_text)
-        print()
+    return output_text

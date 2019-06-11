@@ -6,6 +6,10 @@ def voice_input():
         audio = recognizer.listen(source)
 
     try:
-        print(f'{recognizer.recognize_google(audio)}')
+        speech = recognizer.recognize_google(audio)    
+        # print(f'{speech}')
     except :
         pass
+    return speech
+# print(voice_input())
+# print(voice_input())
